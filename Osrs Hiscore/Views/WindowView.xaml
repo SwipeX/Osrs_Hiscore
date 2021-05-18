@@ -1,0 +1,28 @@
+﻿<fw:AcrylicWindow
+    TintColor="#01FFFFFF"
+    ExtendViewIntoTitleBar="True"
+    x:Class="Osrs_Hiscore.View.WindowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+    xmlns:view="clr-namespace:Osrs_Hiscore.View"
+    mc:Ignorable="d"
+    Name="PART_Main"
+    AcrylicWindowStyle="NoIcon"
+    Title="Osrs Hiscore Lookup"
+    Height="450"
+    Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="1*" />
+            <ColumnDefinition
+                Width="3*" />
+        </Grid.ColumnDefinitions>
+        <view:SideBarView />
+        <view:ResultsView
+            Grid.Column="1" />
+    </Grid>
+</fw:AcrylicWindow>
