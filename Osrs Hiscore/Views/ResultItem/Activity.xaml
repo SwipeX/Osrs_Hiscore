@@ -1,5 +1,5 @@
 <UserControl
-    x:Class="Osrs_Hiscore.Views.ResultItem.ActivityView"
+    x:Class="Osrs_Hiscore.Views.ResultItem.Activity"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -13,13 +13,15 @@
     <Border
         Width="100"
         Height="100"
-        Margin="10"
+        Margin="0 10 10 0"
         CornerRadius="2"
-        Background="White">
+        Background="WhiteSmoke">
         <Grid
             VerticalAlignment="Center"
             HorizontalAlignment="Center">
             <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="20" />
                 <RowDefinition
                     Height="20" />
                 <RowDefinition
@@ -47,6 +49,14 @@
                 FontSize="14"
                 Foreground="#CECDCD"
                 Text="{Binding Entry.Rank, StringFormat=Rank:{0}}" />
+            <TextBlock
+                Grid.Row="3"
+                HorizontalAlignment="Center"
+                FontFamily="Segoe UI"
+                FontWeight="Light"
+                FontSize="14"
+                Foreground="#CECDCD"
+                Text="{Binding Entry.Score, StringFormat=Score:{0}}" />
         </Grid>
     </Border>
 </UserControl>

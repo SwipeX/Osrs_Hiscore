@@ -2,9 +2,325 @@
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net5.0-windows</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <RootNamespace>Osrs_Hiscore</RootNamespace>
         <UseWPF>true</UseWPF>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Views\Icons\abyssalsire.png" />
+      <None Remove="Views\Icons\alchemicalhydra.png" />
+      <None Remove="Views\Icons\barrowschests.png" />
+      <None Remove="Views\Icons\bountyhunterhunter.png" />
+      <None Remove="Views\Icons\bountyhunterrogue.png" />
+      <None Remove="Views\Icons\bryophyta.png" />
+      <None Remove="Views\Icons\callisto.png" />
+      <None Remove="Views\Icons\cerberus.png" />
+      <None Remove="Views\Icons\chambersofxeric.png" />
+      <None Remove="Views\Icons\chambersofxericchallengemode.png" />
+      <None Remove="Views\Icons\chaoselemental.png" />
+      <None Remove="Views\Icons\chaosfanatic.png" />
+      <None Remove="Views\Icons\cluescrollsall.png" />
+      <None Remove="Views\Icons\cluescrollsbeginner.png" />
+      <None Remove="Views\Icons\cluescrollseasy.png" />
+      <None Remove="Views\Icons\cluescrollselite.png" />
+      <None Remove="Views\Icons\cluescrollshard.png" />
+      <None Remove="Views\Icons\cluescrollsmaster.png" />
+      <None Remove="Views\Icons\cluescrollsmedium.png" />
+      <None Remove="Views\Icons\commanderzilyana.png" />
+      <None Remove="Views\Icons\corporealbeast.png" />
+      <None Remove="Views\Icons\crazyarchaeologist.png" />
+      <None Remove="Views\Icons\dagannothprime.png" />
+      <None Remove="Views\Icons\dagannothrex.png" />
+      <None Remove="Views\Icons\dagannothsupreme.png" />
+      <None Remove="Views\Icons\derangedarchaeologist.png" />
+      <None Remove="Views\Icons\generalgraardor.png" />
+      <None Remove="Views\Icons\giantmole.png" />
+      <None Remove="Views\Icons\grotesqueguardians.png" />
+      <None Remove="Views\Icons\hespori.png" />
+      <None Remove="Views\Icons\kalphitequeen.png" />
+      <None Remove="Views\Icons\kingblackdragon.png" />
+      <None Remove="Views\Icons\kraken.png" />
+      <None Remove="Views\Icons\kreearra.png" />
+      <None Remove="Views\Icons\kriltsutsaroth.png" />
+      <None Remove="Views\Icons\leaguepoints.png" />
+      <None Remove="Views\Icons\lmsrank.png" />
+      <None Remove="Views\Icons\mimic.png" />
+      <None Remove="Views\Icons\mining.png" />
+      <None Remove="Views\Icons\nightmare.png" />
+      <None Remove="Views\Icons\obor.png" />
+      <None Remove="Views\Icons\sarachnis.png" />
+      <None Remove="Views\Icons\scorpia.png" />
+      <None Remove="Views\Icons\skotizo.png" />
+      <None Remove="Views\Icons\soulwarszeal.png" />
+      <None Remove="Views\Icons\tempoross.png" />
+      <None Remove="Views\Icons\theatreofblood.png" />
+      <None Remove="Views\Icons\thecorruptedgauntlet.png" />
+      <None Remove="Views\Icons\thegauntlet.png" />
+      <None Remove="Views\Icons\thermonuclearsmokedevil.png" />
+      <None Remove="Views\Icons\tzkalzuk.png" />
+      <None Remove="Views\Icons\tztokjad.png" />
+      <None Remove="Views\Icons\venenatis.png" />
+      <None Remove="Views\Icons\vetion.png" />
+      <None Remove="Views\Icons\vorkath.png" />
+      <None Remove="Views\Icons\wintertodt.png" />
+      <None Remove="Views\Icons\zalcano.png" />
+      <None Remove="Views\Icons\zulrah.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+      <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Views\Icons\abyssalsire.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\agility.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\alchemicalhydra.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\attack.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\barrowschests.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\bountyhunterhunter.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\bountyhunterrogue.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\bryophyta.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\callisto.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cerberus.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\chambersofxeric.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\chambersofxericchallengemode.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\chaoselemental.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\chaosfanatic.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollsall.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollsbeginner.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollseasy.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollselite.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollshard.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollsmaster.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cluescrollsmedium.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\combat.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\commanderzilyana.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\construction.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\cooking.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\corporealbeast.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\crafting.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\crazyarchaeologist.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\dagannothprime.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\dagannothrex.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\dagannothsupreme.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\defence.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\derangedarchaeologist.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\farming.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\firemaking.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\fishing.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\fletching.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\generalgraardor.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\giantmole.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\grotesqueguardians.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\herblore.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\hespori.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\hitpoints.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\hunter.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\kalphitequeen.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\kingblackdragon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\kraken.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\kreearra.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\kriltsutsaroth.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\leaguepoints.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\lmsrank.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\magic.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\mimic.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\mining.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\nightmare.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\obor.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\overall.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\prayer.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\ranged.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\runecraft.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\sarachnis.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\scorpia.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\skotizo.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\slayer.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\smithing.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\soulwarszeal.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\strength.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\tempoross.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\theatreofblood.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\thecorruptedgauntlet.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\thegauntlet.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\thermonuclearsmokedevil.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\thieving.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\tzkalzuk.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\tztokjad.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\venenatis.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\vetion.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\vorkath.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\wintertodt.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\woodcutting.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\zalcano.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <Resource Include="Views\Icons\zulrah.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
 
 </Project>

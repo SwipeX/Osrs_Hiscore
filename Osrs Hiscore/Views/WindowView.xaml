@@ -1,19 +1,24 @@
-﻿<fw:AcrylicWindow
-    TintColor="#01FFFFFF"
-    ExtendViewIntoTitleBar="True"
-    x:Class="Osrs_Hiscore.View.WindowView"
+﻿<Window
+    x:Class="Osrs_Hiscore.Views.WindowView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
-    xmlns:view="clr-namespace:Osrs_Hiscore.View"
+    xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
+    xmlns:viewModels="clr-namespace:Osrs_Hiscore.ViewModels"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:util="clr-namespace:Osrs_Hiscore.Util"
     mc:Ignorable="d"
-    Name="PART_Main"
-    AcrylicWindowStyle="NoIcon"
+    d:DataContext="{d:DesignInstance viewModels:WindowViewModel}"
+    AllowsTransparency="True"
+    WindowStyle="None"
+    Background="#00FFFFFF"
     Title="Osrs Hiscore Lookup"
-    Height="450"
-    Width="800">
+    Height="600"
+    Width="1000">
+    <i:Interaction.Behaviors>
+        <util:DragMoveBehavior />
+    </i:Interaction.Behaviors>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition
@@ -21,8 +26,10 @@
             <ColumnDefinition
                 Width="3*" />
         </Grid.ColumnDefinitions>
-        <view:SideBarView />
-        <view:ResultsView
+        <ContentControl
+            cal:View.Model="{Binding SideBar}" />
+        <ContentControl
+            cal:View.Model="{Binding Results}"
             Grid.Column="1" />
     </Grid>
-</fw:AcrylicWindow>
+</Window>

@@ -5,10 +5,40 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Osrs_Hiscore.Views"
+    xmlns:viewModels="clr-namespace:Osrs_Hiscore.ViewModels"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    d:DataContext="{d:DesignInstance viewModels:NotFoundViewModel}"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
-    <Grid>
-        
-    </Grid>
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Orientation="Vertical">
+        <fa:FontAwesome
+            HorizontalAlignment="Center"
+            Icon="Warning"
+            FontSize="168"
+            Foreground="IndianRed" />
+        <TextBlock
+            Margin="0 20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            FontFamily="Segoe UI"
+            FontSize="26"
+            FontWeight="Medium">
+            <Run
+                Text="Could not find:" />
+            <Run
+                Text="{Binding LastName}"
+                FontWeight="Regular"
+                FontStyle="Italic" />
+            <Run
+                Text="listed as an" />
+            <Run
+                Text="{Binding LastMode}"
+                FontWeight="SemiBold"
+                FontStyle="Oblique" />
+        </TextBlock>
+    </StackPanel>
 </UserControl>

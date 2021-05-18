@@ -5,10 +5,39 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Osrs_Hiscore.Views"
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
-    <Grid>
-        
+    <Grid
+        MinHeight="40"
+        Background="#CCF0F1F1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="40" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+        <fa:FontAwesome
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="20"
+            Icon="Search"
+            Foreground="#CECDCD" />
+        <TextBox
+            Height="40"
+            BorderThickness="0"
+            Grid.Column="1"
+            Background="#CCF0F1F1"
+            Foreground="Black"
+            FontFamily="Segoe UI"
+            FontWeight="Medium"
+            FontSize="20"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            VerticalContentAlignment="Center"
+            Name="PART_Box"
+            cal:Message.Attach="[DelayedEvent TextChanged] = [Action TextUpdated(PART_Box.Text)]" />
     </Grid>
 </UserControl>

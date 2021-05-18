@@ -4,11 +4,37 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Osrs_Hiscore.Views"
+    xmlns:models="clr-namespace:Osrs_Hiscore.Models"
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:views="clr-namespace:Osrs_Hiscore.Views"
+    xmlns:viewModels="clr-namespace:Osrs_Hiscore.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:ResultsWrapViewModel}"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
-    <Grid>
-        
-    </Grid>
+    <ItemsControl
+        ItemsSource="{Binding ResultItems}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel
+                    IsItemsHost="True" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.Template>
+            <ControlTemplate>
+                <ScrollViewer
+                    VerticalScrollBarVisibility="Auto"
+                    HorizontalScrollBarVisibility="Disabled">
+                    <ItemsPresenter />
+                </ScrollViewer>
+            </ControlTemplate>
+        </ItemsControl.Template>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <ContentControl
+                    cal:View.Model="{Binding}"
+                    cal:View.Context="{Binding ViewContext}" />
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
 </UserControl>
