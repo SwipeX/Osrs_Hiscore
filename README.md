@@ -1,3 +1,3 @@
 # Osrs_Hiscore
 
-!(test)[https://imgur.com/RNLtpwW]
+!(test)[https://i.imgur.com/RNLtpwW.gif]
